@@ -3,10 +3,14 @@
 body {
     font-family: 'Arial', sans-serif;
 }
-
+body {
+    background: lightcyan;
+}
 @color-black: #000;
 @color-white: #fff;
 @color-gray: rgb(92, 92, 92);
+@color-gray-light: rgb(199, 199, 199);
+@color-orange: #ffa687;
 .icon {
     font-size: 13px;
     &--gray {
@@ -14,12 +18,17 @@ body {
         margin-right: 10px;
         margin-left: 6px;
     }
+    &--menu {
+        font-size: 25px;
+        cursor: pointer;
+    }
 }
 .top {
     background-color: @color-black;
     color: @color-white;
     text-transform: uppercase;
     font-size: 11px;
+    z-index: 2;
     &__container {
         display: flex;
         flex-wrap: wrap;
@@ -57,6 +66,7 @@ body {
             padding-left: 17px;
             display: flex;
             height: 100%;
+            z-index: 2;
             &::before {
                 content: '';
                 position: absolute;
@@ -68,6 +78,7 @@ body {
             }
             &:hover .top__list {
                 display: block;
+                z-index: 2;
             }
         }
     }
@@ -80,6 +91,7 @@ body {
         background: @color-black;
         margin: 0;
         padding: 0;
+        z-index: 2;
     }
     &__item {
         list-style-type: none;
@@ -96,5 +108,98 @@ body {
         right: 15px;
     }
 }
-
+.nav {
+    background: @color-white;
+    &__link {
+        display: inline-block;
+        width: 100%;
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    &__menu {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    &__item {
+        list-style-type: none;
+        padding: 43px 15px;
+        
+        cursor: pointer;
+        &:hover {
+            background: @color-gray-light;
+            color: @color-white;
+            .nav__subcontainer {
+                display: flex;
+                color: @color-black;
+            }
+        }
+        &--submenu {
+            padding: 3px 0px 3px 5px;
+            transition: 0.2s;
+            border-left: 1px solid @color-gray-light;
+            &:hover {
+                padding-left: 10px;
+            }
+        }
+    }
+    &__subcontainer {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: @color-white;
+    }
+    &__sub {
+        list-style-type: none;
+        width: 25%;
+    }
+    &__submenu {
+        margin:0;
+        padding: 10px 15px;
+    }
+    &__logo {
+        margin-right: auto;
+    }
+    &__manage {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+.menuhide {
+    display: none;
+}
+.cart {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    &__select {
+        display: inline-block;
+        width: 100%;
+        min-width: 214px;
+        padding: 7px;
+        border: 1px solid @color-gray-light;
+        color: @color-gray;
+    }
+    &__info {
+        border: 1px solid @color-gray-light;
+        border-top: 0;
+        padding: 7px;
+        display: flex;
+        justify-content: space-between;
+        color: @color-gray;
+        font-size: 12px;
+        user-select: none;
+    }
+    &__items {
+        user-select: inherit;
+    }
+}
 @import 'rwd';
