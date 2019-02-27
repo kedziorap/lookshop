@@ -1,2 +1,100 @@
 @import 'base';
 
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+@color-black: #000;
+@color-white: #fff;
+@color-gray: rgb(92, 92, 92);
+.icon {
+    font-size: 13px;
+    &--gray {
+        color: @color-gray;
+        margin-right: 10px;
+        margin-left: 6px;
+    }
+}
+.top {
+    background-color: @color-black;
+    color: @color-white;
+    text-transform: uppercase;
+    font-size: 11px;
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__block {
+        display: flex;
+        align-items: center;
+    }
+    &__link {
+        display: inline-block;
+        padding: 8px 0;
+        font-size: 12px;
+        transform: translateX(6px);
+        cursor: pointer;
+        position: relative;
+        &--separate {
+            padding: 8px 11px;
+            font-size: 11px;
+            transform: translateX(0px);
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 28px;
+                width: 1px;
+                background: @color-gray;
+            }
+        }
+        &--list {
+            position: relative;
+            padding-right: 31px;
+            padding-left: 17px;
+            display: flex;
+            height: 100%;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 28px;
+                width: 1px;
+                background: @color-gray;
+            }
+            &:hover .top__list {
+                display: block;
+            }
+        }
+    }
+    &__list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 1px;
+        width: 100%;
+        background: @color-black;
+        margin: 0;
+        padding: 0;
+    }
+    &__item {
+        list-style-type: none;
+        padding: 3px 15px;
+        transition: 0.2s padding;
+        &:hover {
+            padding-left: 20px;
+        }
+    }
+    &__arrow {
+        font-size: 15px;
+        position: absolute;
+        top: 3px;
+        right: 15px;
+    }
+}
+
+@import 'rwd';
