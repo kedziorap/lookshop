@@ -7,219 +7,329 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <header>
-        <div class="top">
-            <div class="container">
-                <div class="top__container">
-                    <div class="top__block">
-                        custom care: <a href="tel:888-23-4567" class="top__link">888-23-4567</a>
-                    </div>
-                    <div class="top__block">
-                        <span class="top__link top__link--separate top__link--list">$ us <span
-                                class="top__arrow">&#9662;</span>
-                            <ul class="top__list">
-                                <li class="top__item">$ us</li>
-                                <li class="top__item">€ ue</li>
-                                <li class="top__item">£ gb</li>
-                            </ul>
-                        </span>
-                        <a href="#" class="top__link top__link--separate"><i class="fas fa-user icon icon--gray"></i> my
-                            account</a>
-                        <a href="#" class="top__link top__link--separate"><i class="fas fa-search icon"></i></a>
+    <div class="wrapper">
+        <header>
+            <div class="top">
+                <div class="container">
+                    <div class="top__container">
+                        <div class="top__block">
+                            custom care: <a href="tel:888-23-4567" class="top__link">888-23-4567</a>
+                        </div>
+                        <div class="top__block">
+                            <span class="top__link top__link--separate top__link--list">$ us <span
+                                    class="top__arrow">&#9662;</span>
+                                <ul class="top__list">
+                                    <li class="top__item">$ us</li>
+                                    <li class="top__item">€ ue</li>
+                                    <li class="top__item">£ gb</li>
+                                </ul>
+                            </span>
+                            <a href="#" class="top__link top__link--separate"><i
+                                    class="fas fa-user icon icon--gray"></i>
+                                my
+                                account</a>
+                            <a href="#" class="top__link top__link--separate"><i class="fas fa-search icon"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <nav class="nav">
-            <div class="container nav__container">
-                <div class="nav__logo">
-                    <a href="#"><img src="img/logo.png" alt=""></a>
-                </div>
-                <div class="nav__manage">
+            <nav class="nav">
+                <div class="container nav__container">
+                    <div class="nav__logo">
+                        <a href="#"><img src="img/logo.png" alt=""></a>
+                    </div>
+                    <div class="nav__manage">
                         <div class="menuhide">
-                                <span class="menuhide__name">Menu</span>
-                                <i class="fas fa-bars icon icon--menu" id="hamburger"></i>
+                            <span class="menuhide__name">Menu</span>
+                            <i class="fas fa-bars icon icon--menu" id="hamburger"></i>
                         </div>
                         <ul class="nav__menu">
-                                <li class="nav__item">new &#9662;
-                                    <ul class="nav__subcontainer">
-                                        <li class="nav__sub">
-                                            <ul class="nav__submenu">
-                                                <li class="nav__item nav__item--submenu"><a href="#"
-                                                        class="nav__link">collections</a></li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">suits</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#"
-                                                        class="nav__link">jackets</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">other</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav__sub">
-                                            <ul class="nav__submenu">
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">sfd sddf
-                                                    </a></li>
-                                                <li class="nav__item nav__item--submenu"><a href="#"
-                                                        class="nav__link">ssdfdfs</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav__item">designers &#9662;
-                                    <ul class="nav__subcontainer">
-                                        <li class="nav__sub">
-                                            <ul class="nav__submenu">
-                                                <li class="nav__item nav__item--submenu"><a href="#"
-                                                        class="nav__link">collections</a></li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">suits</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav__sub">
-                                            <ul class="nav__submenu">
-                                                <li class="nav__item nav__item--submenu"><a href="#"
-                                                        class="nav__link">collections</a></li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">suits</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav__item">women &#9662;
-                                    <ul class="nav__subcontainer">
-                                        <li class="nav__sub">
-                                            <ul class="nav__submenu">
-                                                <li class="nav__item nav__item--submenu"><a href="#"
-                                                        class="nav__link">collections</a></li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">suits</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav__sub">
-                                            <ul class="nav__submenu">
-                                                <li class="nav__item nav__item--submenu"><a href="#"
-                                                        class="nav__link">collections</a></li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">suits</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav__item">men &#9662;
-                                    <ul class="nav__subcontainer">
-                                        <li class="nav__sub">
-                                            <ul class="nav__submenu">
-                                                <li class="nav__item nav__item--submenu"><a href="#"
-                                                        class="nav__link">collections</a></li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">suits</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav__sub">
-                                            <ul class="nav__submenu">
-                                                <li class="nav__item nav__item--submenu"><a href="#"
-                                                        class="nav__link">collections</a></li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">suits</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav__item">celarence &#9662;
-                                    <ul class="nav__subcontainer">
-                                        <li class="nav__sub">
-                                            <ul class="nav__submenu">
-                                                <li class="nav__item nav__item--submenu"><a href="#"
-                                                        class="nav__link">collections</a></li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">suits</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav__sub">
-                                            <ul class="nav__submenu">
-                                                <li class="nav__item nav__item--submenu"><a href="#"
-                                                        class="nav__link">collections</a></li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">suits</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                                <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">shoes</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-        
-                            </ul>
-                </div>
-                <div class="cart">
-                    <div class="cart__container">
-                        <select class="cart__select" name="select" id="cart-select" selected="audi">
-                            <option value="0" selected disabled hidden>Your cart</option>
-                            <option value="1" disabled>Cart is empty!</option>
-                        </select>
-                        <div class="cart__info">
-                            <i class="fas fa-shopping-bag icon icon--inside"></i><span class="cart__items">0 items | $ 0</span>
+                            <li class="nav__item">new &#9662;
+                                <ul class="nav__subcontainer">
+                                    <li class="nav__sub">
+                                        <ul class="nav__submenu">
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">collections</a></li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">suits</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">jackets</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">other</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav__sub">
+                                        <ul class="nav__submenu">
+                                            <li class="nav__item nav__item--submenu"><a href="#" class="nav__link">sfd
+                                                    sddf
+                                                </a></li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">ssdfdfs</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__item">designers &#9662;
+                                <ul class="nav__subcontainer">
+                                    <li class="nav__sub">
+                                        <ul class="nav__submenu">
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">collections</a></li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">suits</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav__sub">
+                                        <ul class="nav__submenu">
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">collections</a></li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">suits</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__item">women &#9662;
+                                <ul class="nav__subcontainer">
+                                    <li class="nav__sub">
+                                        <ul class="nav__submenu">
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">collections</a></li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">suits</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav__sub">
+                                        <ul class="nav__submenu">
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">collections</a></li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">suits</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__item">men &#9662;
+                                <ul class="nav__subcontainer">
+                                    <li class="nav__sub">
+                                        <ul class="nav__submenu">
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">collections</a></li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">suits</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav__sub">
+                                        <ul class="nav__submenu">
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">collections</a></li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">suits</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav__item">celarence &#9662;
+                                <ul class="nav__subcontainer">
+                                    <li class="nav__sub">
+                                        <ul class="nav__submenu">
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">collections</a></li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">suits</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav__sub">
+                                        <ul class="nav__submenu">
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">collections</a></li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">suits</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                            <li class="nav__item nav__item--submenu"><a href="#"
+                                                    class="nav__link">shoes</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="cart">
+                        <div class="cart__container">
+                            <select class="cart__select" name="select" id="cart-select" selected="audi">
+                                <option value="0" selected disabled hidden>Your cart</option>
+                                <option value="1" disabled>Cart is empty!</option>
+                            </select>
+                            <div class="cart__info">
+                                <i class="fas fa-shopping-bag icon icon--inside"></i><span class="cart__items">0 items
+                                    |
+                                    $ 0</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </nav>
+        </header>
+        <section>
+            <div class="slider mobile-hide">
+                <div class="slider__container">
+                    <div class="slider__list">
+                        <div class="slider__item">
+                            <img src="img/slide.jpg" alt="">
+                            <div class="slider__content welcome">
+                                <div class="welcome__container">
+                                    <span class="welcome__pre">Crazy</span>
+                                    <h2 class="welcome__title">Crazy summer</h2>
+                                    <span class="welcome__after">woman collection</span>
+                                    <button class="btn">shop now &#9656;</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item hide">
+                            <img src="img/slide.jpg" alt="">
+                            <div class="slider__content welcome">
+                                <div class="welcome__container">
+                                    <span class="welcome__pre">Crazy</span>
+                                    <h2 class="welcome__title">Crazy summer</h2>
+                                    <span class="welcome__after">woman collection</span>
+                                    <button class="btn">shop now &#9656;</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item hide">
+                            <img src="img/slide.jpg" alt="">
+                            <div class="slider__content welcome">
+                                <div class="welcome__container">
+                                    <span class="welcome__pre">Crazy</span>
+                                    <h2 class="welcome__title">Crazy summer</h2>
+                                    <span class="welcome__after">woman collection</span>
+                                    <button class="btn">shop now &#9656;</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item hide">
+                            <img src="img/slide.jpg" alt="">
+                            <div class="slider__content welcome">
+                                <div class="welcome__container">
+                                    <span class="welcome__pre">Crazy</span>
+                                    <h2 class="welcome__title">Crazy summer</h2>
+                                    <span class="welcome__after">woman collection</span>
+                                    <button class="btn">shop now &#9656;</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__item hide">
+                            <img src="img/slide.jpg" alt="">
+                            <div class="slider__content welcome">
+                                <div class="welcome__container">
+                                    <span class="welcome__pre">Crazy</span>
+                                    <h2 class="welcome__title">Crazy summer</h2>
+                                    <span class="welcome__after">woman collection</span>
+                                    <button class="btn">shop now &#9656;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span id="prev-slider" class="slider__arrow">&#10094;</span>
+                    <span id="next-slider" class="slider__arrow slider__arrow--next">&#10095;</span>
+                    <span class="slider__progress"></span>
+                    <span class="slider__pagination"></span>
+                </div>
             </div>
-        </nav>
-    </header>
-    <script
-			  src="https://code.jquery.com/jquery-3.3.1.min.js"
-			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-              crossorigin="anonymous"></script>
-              <script src="js/script.js"></script>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

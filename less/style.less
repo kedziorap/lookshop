@@ -1,17 +1,27 @@
 @import 'base';
-
+@font-face {
+    font-family: 'Royale';
+    src: url('../fonts/Luxury\ Royale\ JF\ Regular.ttf');
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 body {
     font-family: 'Arial', sans-serif;
 }
-body {
-    background: lightcyan;
-}
+
 @color-black: #000;
 @color-white: #fff;
+@color-white-transparent: rgba(255, 255, 255, 0.8);
 @color-gray: rgb(92, 92, 92);
+@color-gray-transparent: rgba(92, 92, 92, 0.4);
 @color-gray-light: rgb(199, 199, 199);
 @color-orange: #ffa687;
 @color-super-light: #fafafa;
+@color-brown: #91817a;
+@color-pink: #ba96a2;
+@color-orange-dark: #e88e6e;
+.hide {
+    display: none;
+}
 .icon {
     font-size: 13px;
     &--gray {
@@ -157,6 +167,7 @@ body {
         margin: 0;
         padding: 0;
         background: @color-white;
+        z-index: 2;
     }
     &__sub {
         list-style-type: none;
@@ -202,5 +213,166 @@ body {
     &__items {
         user-select: inherit;
     }
+}
+.slider {
+    &__container {
+        position: relative;
+    }
+    &__item {
+        position: relative;
+    }
+    &__content {
+        position: absolute;
+        top: 32%;
+        left: 15%;
+        transform: translate(-15%, -32%);
+    }
+    &__arrow {
+        user-select: none;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        padding: 45px 10px;
+        background: @color-white-transparent;
+        cursor: pointer;
+        font-weight: bold;
+        color: @color-gray-light;
+        transform: translateY(-50%);
+        font-size: 20px;
+        transition: 0.2s background-color;
+        &--next {
+            right: 0;
+            left: auto;
+        }
+        &:hover {
+            background: @color-white;
+        }
+    }
+    &__progress {
+        position: absolute;
+        display: inline-block;
+        bottom: 0;
+        height: 7px;
+        width: 0;
+        background: @color-gray-transparent;
+    }
+    &__pagination {
+        position: absolute;
+        bottom: -60px;
+        width: 100%;
+    }
+    &__dots {
+        display: flex;
+        padding: 0;
+        justify-content: center;
+        li {
+            display: inline-block;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 10px;
+            width: 10px;
+            height: 10px;
+            background: @color-gray-light;
+            cursor: pointer;
+            transition: 0.2s background;
+            &:hover {
+                background: @color-orange;
+            }
+            button {
+                display: none;
+            }
+        }
+        .slick-active {
+            background: @color-orange;
+        }
+    }
+}
+
+
+.welcome {
+    text-align: center;
+    max-width: 500px;
+    &__pre {
+        font-family: 'Royale', serif;
+        font-size: 36px;
+        position: relative;
+        color: @color-brown;
+        &::before, &::after {
+            content: '';
+            width: 91.9%;
+            height: 1px;
+            top: 60%;
+            position: absolute;
+            background: @color-brown;
+        }
+        &:before {
+            left: calc(-100%);
+        }
+        &::after {
+            right: calc(-100% - 5px);
+            background: @color-brown;
+        }
+    }
+    &__title {
+        user-select: none;
+        margin-top: 6px;
+        margin-bottom: 25px;
+        line-height: 0.78;
+        font-family: 'Roboto Condensed';
+        text-transform: uppercase;
+        font-size: 93px;
+        font-weight: 900;
+        background: linear-gradient(@color-orange, @color-pink);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 68%;
+            background: @color-brown;
+            bottom: -10px;
+            left: 16%;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 68%;
+            background: @color-brown;
+            bottom: -15px;
+            left: 16%;
+        }
+    }
+    &__after {
+        text-transform: uppercase;
+        display: inline-block;
+        font-weight: 200;
+        width: 100%;
+        font-family: 'Helvetica', sans-serif;
+        font-size: 30px;
+        color: @color-brown;
+        margin-bottom: 11px;
+    }
+}
+.btn {
+    background: @color-orange;
+    text-transform: uppercase;
+    color: @color-white;
+    padding: 17px 25px;
+    border: 0;
+    border-bottom: 2px solid @color-orange-dark;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(90deg, @color-orange-dark 50%, @color-orange 50%);
+    background-position: 100% 0;
+    background-size: 300%;
+    transition: 0.5s background;
+    &:hover {
+        background-position: 0 100%;
+    }
+
 }
 @import 'rwd';
