@@ -12,7 +12,7 @@ $(function(){
     });
     //slick
     var sliderBig = $('.slider__list');
-    sliderBig.slick({
+    var slickConfigure = {
         arrow: false,
         nextArrow: $('#next-slider'),
         prevArrow: $('#prev-slider'),
@@ -21,10 +21,9 @@ $(function(){
         dotsClass: 'slider__dots',
         autoplay: true,
         autoplaySpeed: 5000
-    });
-    sliderBig.on('reinit', function(event, slick, direction){
-        console.log('init');
-    })
+    };
+    sliderBig.slick(slickConfigure);
+
     sliderBig.on('afterChange', function(event, slick, direction) {
         $('.slider__progress').stop();
         resetProgressBar();
@@ -43,4 +42,5 @@ $(function(){
     function resetProgressBar() {
         $('.slider__progress').css('width', '0px');
     }
+    animateProgressBar();
 });

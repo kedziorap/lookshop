@@ -10,10 +10,12 @@ body {
 
 @color-black: #000;
 @color-white: #fff;
+@color-white-almost: #f7f7f7;
 @color-white-transparent: rgba(255, 255, 255, 0.8);
 @color-gray: rgb(92, 92, 92);
 @color-gray-transparent: rgba(92, 92, 92, 0.4);
 @color-gray-light: rgb(199, 199, 199);
+@color-gray-super-light: #ededed;
 @color-orange: #ffa687;
 @color-super-light: #fafafa;
 @color-brown: #91817a;
@@ -215,6 +217,7 @@ body {
     }
 }
 .slider {
+    margin-bottom: 75px;
     &__container {
         position: relative;
     }
@@ -287,8 +290,6 @@ body {
         }
     }
 }
-
-
 .welcome {
     text-align: center;
     max-width: 500px;
@@ -357,19 +358,65 @@ body {
         margin-bottom: 11px;
     }
 }
+.newsletter {
+    background: @color-gray-super-light;
+    font-size: 12px;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__input {
+        border: 0;
+        padding: 5px 6px;
+        width: 130px;
+        &::placeholder {
+            font-style: italic;
+            font-size: 12px;
+        }
+    }
+    &__box {
+        display: flex;
+        align-items: center;
+    }
+    &__text {
+        margin-right: 10px;
+    }
+    &__link {
+        color: @color-gray;
+        background: @color-white-almost;
+        display: inline-block;
+        padding: 17px 19px;
+        font-size: 20px;
+        &:hover {
+            background: @color-gray-super-light;
+        }
+        &:nth-of-type(even){
+            background: @color-gray-super-light;
+            &:hover {
+                background: @color-white-almost;
+            }
+        }
+    }
+}
+
 .btn {
     background: @color-orange;
     text-transform: uppercase;
     color: @color-white;
     padding: 17px 25px;
     border: 0;
-    border-bottom: 2px solid @color-orange-dark;
+    border-bottom: 3px solid @color-orange-dark;
     font-size: 16px;
     cursor: pointer;
     background: linear-gradient(90deg, @color-orange-dark 50%, @color-orange 50%);
     background-position: 100% 0;
     background-size: 300%;
     transition: 0.5s background;
+    &--form {
+        padding: 1px 10px;
+        font-size: 20px;
+        font-weight: 700;
+    }
     &:hover {
         background-position: 0 100%;
     }

@@ -89,6 +89,7 @@
         margin: 23px 0;
     }
     .slider {
+        margin-bottom: 50px;
         &__content {
             left: 11.9%;
             top: 32%;
@@ -125,6 +126,10 @@
     .btn {
         padding: 10px 15px;
         font-size: 14px;
+        &--form {
+            font-size: 20px;
+            padding: 0 8px;
+        }
     }
 }
 
@@ -230,6 +235,37 @@
         }
         &__container {
             width:100%;
+        }
+    }
+    .newsletter {
+        background: transparent;
+        font-size: 16px;
+        &__container {
+            flex-wrap: wrap;
+        }
+        &__box {
+            width: 100%;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        &__input {
+            background: @color-gray-super-light;
+            width: 100%;
+            padding: 20px 12px;
+            &::placeholder {
+                font-size: 16px;
+            }
+        }
+        &__form {
+            display: flex;
+            width: 100%;
+        }
+    }
+    .btn {
+        &--form {
+            font-size: 40px;
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
 }

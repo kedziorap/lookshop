@@ -272,6 +272,9 @@ body {
 .cart__items {
   user-select: inherit;
 }
+.slider {
+  margin-bottom: 75px;
+}
 .slider__container {
   position: relative;
 }
@@ -412,19 +415,64 @@ body {
   color: #91817a;
   margin-bottom: 11px;
 }
+.newsletter {
+  background: #ededed;
+  font-size: 12px;
+}
+.newsletter__container {
+  display: flex;
+  justify-content: space-between;
+}
+.newsletter__input {
+  border: 0;
+  padding: 5px 6px;
+  width: 130px;
+}
+.newsletter__input::placeholder {
+  font-style: italic;
+  font-size: 12px;
+}
+.newsletter__box {
+  display: flex;
+  align-items: center;
+}
+.newsletter__text {
+  margin-right: 10px;
+}
+.newsletter__link {
+  color: #5c5c5c;
+  background: #f7f7f7;
+  display: inline-block;
+  padding: 17px 19px;
+  font-size: 20px;
+}
+.newsletter__link:hover {
+  background: #ededed;
+}
+.newsletter__link:nth-of-type(even) {
+  background: #ededed;
+}
+.newsletter__link:nth-of-type(even):hover {
+  background: #f7f7f7;
+}
 .btn {
   background: #ffa687;
   text-transform: uppercase;
   color: #fff;
   padding: 17px 25px;
   border: 0;
-  border-bottom: 2px solid #e88e6e;
+  border-bottom: 3px solid #e88e6e;
   font-size: 16px;
   cursor: pointer;
   background: linear-gradient(90deg, #e88e6e 50%, #ffa687 50%);
   background-position: 100% 0;
   background-size: 300%;
   transition: 0.5s background;
+}
+.btn--form {
+  padding: 1px 10px;
+  font-size: 20px;
+  font-weight: 700;
 }
 .btn:hover {
   background-position: 0 100%;
@@ -538,6 +586,9 @@ body {
   .cart {
     margin: 23px 0;
   }
+  .slider {
+    margin-bottom: 50px;
+  }
   .slider__content {
     left: 11.9%;
     top: 32%;
@@ -573,6 +624,10 @@ body {
   .btn {
     padding: 10px 15px;
     font-size: 14px;
+  }
+  .btn--form {
+    font-size: 20px;
+    padding: 0 8px;
   }
 }
 @media (max-width: 768px) {
@@ -693,5 +748,34 @@ body {
   }
   .cart__container {
     width: 100%;
+  }
+  .newsletter {
+    background: transparent;
+    font-size: 16px;
+  }
+  .newsletter__container {
+    flex-wrap: wrap;
+  }
+  .newsletter__box {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .newsletter__input {
+    background: #ededed;
+    width: 100%;
+    padding: 20px 12px;
+  }
+  .newsletter__input::placeholder {
+    font-size: 16px;
+  }
+  .newsletter__form {
+    display: flex;
+    width: 100%;
+  }
+  .btn--form {
+    font-size: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
