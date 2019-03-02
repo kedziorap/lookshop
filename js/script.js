@@ -24,7 +24,7 @@ $(function(){
     };
     sliderBig.slick(slickConfigure);
 
-    sliderBig.on('afterChange', function(event, slick, direction) {
+    sliderBig.on('afterChange', function() {
         $('.slider__progress').stop();
         resetProgressBar();
         animateProgressBar();

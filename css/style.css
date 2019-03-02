@@ -19,7 +19,7 @@ body {
   flex-wrap: wrap;
 }
 [class^="col-"] {
-  padding: 12px;
+  padding: 1px;
 }
 img {
   max-width: 100%;
@@ -68,6 +68,10 @@ a {
 @font-face {
   font-family: 'Royale';
   src: url('../fonts/Luxury\ Royale\ JF\ Regular.ttf');
+}
+@font-face {
+  font-family: 'Bello';
+  src: url('../fonts/Bello-Script.ttf');
 }
 @font-face {
   font-family: 'Roboto Condensed';
@@ -418,6 +422,7 @@ body {
 .newsletter {
   background: #ededed;
   font-size: 12px;
+  margin-bottom: 35px;
 }
 .newsletter__container {
   display: flex;
@@ -455,6 +460,146 @@ body {
 .newsletter__link:nth-of-type(even):hover {
   background: #f7f7f7;
 }
+.promote {
+  margin-bottom: 40px;
+}
+.promote__item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.promote__item img {
+  transition: 0.2s all;
+}
+.promote__item:hover img {
+  transform: scale(1.1);
+}
+.promote__content {
+  position: absolute;
+}
+.promote__content--big {
+  top: 50%;
+  left: 35%;
+  transform: translate(0, -50%);
+}
+.promote__content--circle {
+  left: 6%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.promote__content--bottom {
+  bottom: 10px;
+  width: 100%;
+}
+.promote__content--last {
+  bottom: 30px;
+  left: -15%;
+}
+.slogan {
+  display: flex;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+  text-align: center;
+}
+.slogan__top,
+.slogan__slim,
+.slogan__down {
+  display: inline-block;
+  width: 100%;
+  line-height: 0.9;
+}
+.slogan__top {
+  font-weight: 800;
+  font-size: 35px;
+}
+.slogan__white {
+  display: inline-block;
+  width: 100%;
+  font-size: 22px;
+  color: #fff;
+}
+.slogan__slim {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 73px;
+  font-weight: 100;
+}
+.slogan__slim--small {
+  font-size: 38px;
+}
+.slogan__fancy {
+  display: inline-block;
+  text-transform: none;
+  width: 100%;
+  font-family: 'Bello', serif;
+  font-size: 22px;
+  color: #ffa687;
+  margin-top: 15px;
+}
+.slogan__separate {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 50%;
+  font-style: italic;
+  margin: 0 auto;
+  background: #5c5c5c;
+  font-size: 20px;
+  color: #fff;
+  position: relative;
+}
+.slogan__separate::after,
+.slogan__separate::before {
+  content: '';
+  height: 1px;
+  width: 280%;
+  background: #5c5c5c;
+  position: absolute;
+  top: 48%;
+}
+.slogan__separate::after {
+  right: -290%;
+}
+.slogan__separate::before {
+  left: -290%;
+}
+.slogan__down {
+  color: #4fafa0;
+  font-size: 70px;
+  font-weight: 700;
+}
+.slogan__down-circle {
+  font-size: 12px;
+  font-weight: 800;
+}
+.slogan__circle {
+  background: #fff;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px #5c5c5c;
+}
+.slogan__circle--small {
+  display: block;
+  width: 120px;
+  height: 120px;
+  border: 1px solid #c7c7c7;
+  text-align: center;
+  box-shadow: none;
+}
+.slogan__width {
+  display: inline-block;
+  width: 120px;
+  font-size: 25px;
+  color: #fff;
+}
+.slogan__sep {
+  width: 100%;
+}
+.slogan--last {
+  justify-content: center;
+}
 .btn {
   background: #ffa687;
   text-transform: uppercase;
@@ -476,6 +621,14 @@ body {
 }
 .btn:hover {
   background-position: 0 100%;
+}
+.btn--green {
+  background: linear-gradient(90deg, #36615a 50%, #4fafa0 50%);
+  background-position: 100% 0;
+  background-size: 300%;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
 }
 @media (max-width: 992px) {
   .col-m-1 {
@@ -621,6 +774,53 @@ body {
   .welcome__after {
     font-size: 25px;
   }
+  .promote__content--last {
+    bottom: 10px;
+    left: -20%;
+  }
+  .slogan__top {
+    font-size: 20px;
+  }
+  .slogan__white {
+    font-size: 18px;
+  }
+  .slogan__slim {
+    font-size: 45px;
+  }
+  .slogan__slim--small {
+    font-size: 35px;
+  }
+  .slogan__fancy {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  .slogan__separate {
+    font-size: 15px;
+  }
+  .slogan__separate::after,
+  .slogan__separate::before {
+    width: 200%;
+  }
+  .slogan__separate::after {
+    right: -210%;
+  }
+  .slogan__separate::before {
+    left: -210%;
+  }
+  .slogan__down {
+    font-size: 45px;
+  }
+  .slogan__circle {
+    width: 120px;
+    height: 120px;
+  }
+  .slogan__circle--small {
+    width: 110px;
+    height: 110px;
+  }
+  .slogan__width {
+    font-size: 18px;
+  }
   .btn {
     padding: 10px 15px;
     font-size: 14px;
@@ -628,6 +828,9 @@ body {
   .btn--form {
     font-size: 20px;
     padding: 0 8px;
+  }
+  .btn--green {
+    padding: 5px 10px;
   }
 }
 @media (max-width: 768px) {
@@ -764,7 +967,7 @@ body {
   .newsletter__input {
     background: #ededed;
     width: 100%;
-    padding: 20px 12px;
+    padding: 15px 12px;
   }
   .newsletter__input::placeholder {
     font-size: 16px;

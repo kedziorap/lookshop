@@ -123,12 +123,67 @@
             font-size: 25px;
         }
     }
+    .promote {
+        &__content {
+            &--last {
+                bottom: 10px;
+                left: -20%;
+            }
+        }
+    }
+    .slogan {
+        &__top {
+            font-size: 20px;
+        }
+        &__white {
+            font-size: 18px;
+        }
+        &__slim {
+            font-size: 45px;
+            &--small {
+                font-size: 35px;
+            }
+        }
+        &__fancy {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+        &__separate {
+            font-size: 15px;
+            &::after, &::before {
+                width: 200%;
+            }
+            &::after {
+                right: -210%;
+            }
+            &::before {
+                left: -210%;
+            }
+        }
+        &__down {
+            font-size: 45px;
+        }
+        &__circle {
+            width: 120px;
+               height: 120px;
+               &--small {
+                width: 110px;
+                height:110px;
+               }
+        }
+        &__width {
+            font-size: 18px;
+        }
+    }
     .btn {
         padding: 10px 15px;
         font-size: 14px;
         &--form {
             font-size: 20px;
             padding: 0 8px;
+        }
+        &--green {
+            padding: 5px 10px;
         }
     }
 }
@@ -251,7 +306,7 @@
         &__input {
             background: @color-gray-super-light;
             width: 100%;
-            padding: 20px 12px;
+            padding: 15px 12px;
             &::placeholder {
                 font-size: 16px;
             }

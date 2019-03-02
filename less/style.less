@@ -3,11 +3,16 @@
     font-family: 'Royale';
     src: url('../fonts/Luxury\ Royale\ JF\ Regular.ttf');
 }
+@font-face {
+    font-family: 'Bello';
+    src: url('../fonts/Bello-Script.ttf');
+}
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 body {
     font-family: 'Arial', sans-serif;
 }
-
+@color-green: #4fafa0;
+@color-green-darker: #36615a;
 @color-black: #000;
 @color-white: #fff;
 @color-white-almost: #f7f7f7;
@@ -361,6 +366,7 @@ body {
 .newsletter {
     background: @color-gray-super-light;
     font-size: 12px;
+    margin-bottom: 35px;
     &__container {
         display: flex;
         justify-content: space-between;
@@ -398,7 +404,143 @@ body {
         }
     }
 }
-
+.promote {
+    margin-bottom: 40px;
+    &__item {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        img {
+            transition: 0.2s all;
+        }
+        &:hover img {
+            transform: scale(1.1);
+        }
+    }
+    &__content {
+        position: absolute;
+        &--big {
+            top: 50%;
+            left: 35%;
+            transform: translate(0, -50%);
+        }
+        &--circle {
+            left: 6%;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+        &--bottom {
+            bottom: 10px;
+            width: 100%;
+        }
+        &--last {
+            bottom:30px;
+            left: -15%;
+        }
+    }
+}
+.slogan {
+    display: flex;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    text-align: center;
+    &__top, &__slim, &__down {
+        display: inline-block;
+        width: 100%;
+        line-height: 0.9;
+    }
+    &__top {
+        font-weight: 800;
+        font-size: 35px;
+    }
+    &__white {
+        display: inline-block;
+        width: 100%;
+        font-size: 22px;
+        color: @color-white;
+    }
+    &__slim {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 73px;
+        font-weight: 100;
+        &--small {
+            font-size: 38px;
+        }
+    }
+    &__fancy {
+        display: inline-block;
+        text-transform: none;
+        width: 100%;
+        font-family: 'Bello', serif;
+        font-size: 22px;
+        color: @color-orange;
+        margin-top: 15px;
+    }
+    &__separate {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 50%;
+        font-style: italic;
+        margin: 0 auto;
+        background: @color-gray;
+        font-size: 20px;
+        color: @color-white;
+        position: relative;
+        &::after, &::before {
+            content: '';
+            height: 1px;
+            width: 280%;
+            background: @color-gray;
+            position: absolute;
+            top: 48%;
+        }
+        &::after {
+            right: -290%;
+        }
+        &::before {
+            left: -290%;
+        }
+    }
+   &__down {
+       color: @color-green;
+       font-size: 70px;
+       font-weight: 700;
+   }
+   &__down-circle {
+       font-size: 12px;
+       font-weight: 800;
+   }
+   &__circle {
+       background: @color-white;
+       width: 130px;
+       height: 130px;
+       border-radius: 50%;
+       display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 10px @color-gray;
+       &--small {
+           display: block;
+           width: 120px;
+           height: 120px;
+           border: 1px solid @color-gray-light;
+           text-align: center;
+           box-shadow: none;
+       }
+   }
+   &__width {
+       display: inline-block;
+       width: 120px;
+       font-size: 25px;
+       color: @color-white;
+   }
+   &__sep {
+       width: 100%;
+   }
+   &--last {
+    justify-content: center;
+   }
+}
 .btn {
     background: @color-orange;
     text-transform: uppercase;
@@ -419,6 +561,14 @@ body {
     }
     &:hover {
         background-position: 0 100%;
+    }
+    &--green {
+        background: linear-gradient(90deg, @color-green-darker 50%, @color-green 50%);
+        background-position: 100% 0;
+        background-size: 300%;
+        border: none;
+        padding: 5px 10px;
+        font-size: 14px;
     }
 
 }
