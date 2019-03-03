@@ -74,6 +74,10 @@ a {
   src: url('../fonts/Bello-Script.ttf');
 }
 @font-face {
+  font-family: 'Emperial';
+  src: url('../fonts/aEmpirial\ Regular.ttf');
+}
+@font-face {
   font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: 400;
@@ -608,6 +612,9 @@ body {
 .slogan--last {
   justify-content: center;
 }
+.hotspot {
+  margin-bottom: 40px;
+}
 .hotspot__header {
   display: flex;
   width: 100%;
@@ -691,6 +698,10 @@ body {
 }
 .product__content {
   padding-bottom: 10px;
+  overflow: hidden;
+}
+.product__content--dark {
+  background: #ededed;
 }
 .product__photo {
   position: relative;
@@ -761,6 +772,78 @@ body {
   font-size: 12px;
   padding: 8px 10px;
 }
+.sales__badgetbox {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.sales__container {
+  overflow: hidden;
+}
+.sales__col {
+  padding: 10px;
+}
+.badget {
+  position: relative;
+  text-align: center;
+  line-height: 0.8;
+}
+.badget__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: 'Emperial', serif;
+}
+.badget__text {
+  font-size: 35px;
+}
+.badget__text--big {
+  font-size: 80px;
+}
+.badget__down {
+  position: relative;
+}
+.badget__abs {
+  font-size: 35px;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+.badget::after,
+.badget::before {
+  content: '';
+  height: 1px;
+  width: 350%;
+  top: 50%;
+  position: absolute;
+  background: #c7c7c7;
+}
+.badget::after {
+  left: calc(100% + 20px);
+}
+.badget::before {
+  right: calc(100% + 20px);
+}
+.loader {
+  display: none;
+  text-align: center;
+  margin: 15px 0;
+}
+.loader__btn {
+  border: 0;
+  padding: 10px 20px;
+  background: black;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.loader__btn:hover {
+  background: #5c5c5c;
+}
 @media (max-width: 992px) {
   .col-m-1 {
     width: 8.333%;
@@ -797,6 +880,9 @@ body {
   }
   .col-m-12 {
     width: 100%;
+  }
+  .tablet-hide {
+    display: none;
   }
   .nav__container {
     flex-wrap: wrap;
@@ -1003,6 +1089,9 @@ body {
   }
   .col-s-12 {
     width: 100%;
+  }
+  .loader {
+    display: block;
   }
   .container {
     padding: 0 5px;

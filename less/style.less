@@ -7,6 +7,10 @@
     font-family: 'Bello';
     src: url('../fonts/Bello-Script.ttf');
 }
+@font-face {
+    font-family: 'Emperial';
+    src: url('../fonts/aEmpirial\ Regular.ttf');
+}
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 body {
     font-family: 'Arial', sans-serif;
@@ -551,6 +555,7 @@ body {
    }
 }
 .hotspot {
+    margin-bottom: 40px;
     &__header {
         display: flex;
         width: 100%;
@@ -633,6 +638,10 @@ body {
     }
     &__content {
         padding-bottom: 10px;
+        overflow: hidden;
+        &--dark {
+            background: @color-gray-super-light;
+        }
     }
     &__photo {
         position: relative;
@@ -705,5 +714,78 @@ body {
         padding: 8px 10px;
     }
 
+}
+.sales{
+    &__badgetbox {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    &__container {
+        overflow: hidden;
+    }
+    &__col {
+        padding: 10px;
+    }
+}
+.badget {
+    position: relative;
+    text-align: center;
+    line-height: 0.8;
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: @color-white;
+        font-family: 'Emperial', serif;
+    }
+    &__text {
+        font-size: 35px;
+        &--big {
+            font-size:80px;
+        }
+    }
+    &__down {
+        position: relative;
+    }
+    &__abs {
+        font-size: 35px;
+        position: absolute;
+        top: 10%;
+        right: 10%;
+    }
+    &::after, &::before {
+        content: '';
+        height: 1px;
+        width: 350%;
+        top: 50%;
+        position: absolute;
+        background: @color-gray-light;
+    }
+    &::after {
+        left: calc(100% + 20px);
+    }
+    &::before {
+        right: calc(100% + 20px);
+    }
+}
+.loader {
+    display: none;
+    text-align: center;
+    margin: 15px 0;
+    &__btn {
+        border: 0;
+        padding: 10px 20px;
+        background: black;
+        color: @color-white;
+        text-transform: uppercase;
+        transition: 0.2s;
+        cursor: pointer;
+        &:hover {
+            background: @color-gray;
+        }
+    }
 }
 @import 'rwd';
