@@ -772,6 +772,9 @@ body {
   font-size: 12px;
   padding: 8px 10px;
 }
+.sales {
+  margin-bottom: 40px;
+}
 .sales__badgetbox {
   display: flex;
   width: 100%;
@@ -843,6 +846,43 @@ body {
 }
 .loader__btn:hover {
   background: #5c5c5c;
+}
+.brands {
+  margin-top: 55px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
+  text-align: center;
+}
+.brands__title {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 10px;
+  background: #fff;
+  transform: translateY(-20px);
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.about {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.about__title {
+  margin-top: 0;
+}
+.about__paragraph {
+  color: #5c5c5c;
+}
+.cards {
+  background: #ededed;
+}
+.cards__content {
+  padding: 20px 0;
+  text-align: center;
+  color: #5c5c5c;
+  font-size: 14px;
 }
 @media (max-width: 992px) {
   .col-m-1 {

@@ -1,5 +1,7 @@
 
 $(function(){
+    var runingBrands = false;
+    if ($(window).width() > 768)  initBrands();
     $('#hamburger').click(function(){
         $('.nav__menu').slideToggle();
     });
@@ -10,6 +12,8 @@ $(function(){
     $(window).resize(function(){
         if ($(window).width() > 992) $('.nav__menu').removeAttr('style');
         if ($(window).width() > 992) $('.nav__subcontainer').removeAttr('style');
+        if ($(window).width() > 768 && !runingBrands) initBrands();
+        if ($(window).width() <= 768 && runingBrands) unslickBrands();
     });
     //slick
     var sliderBig = $('.slider__list');
@@ -141,4 +145,27 @@ $(function(){
         $('.sales .tablet-hide').css('display', 'block');
         $(this).css('display', 'none');
     });
+
+    //brands
+    function initBrands() {
+        $('.brands__slider').slick({
+            arrows: false,
+            slidesToShow: 7,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            responsive: [
+                {
+                  breakpoint: 992,
+                  settings: {
+                    slidesToShow: 6
+                  }
+                }
+            ]
+        });
+        runingBrands = true;
+    }
+    function unslickBrands() {
+        $('.brands__slider').slick('unslick');
+        runingBrands = false;
+    }
 });

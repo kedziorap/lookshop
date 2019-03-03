@@ -716,6 +716,7 @@ body {
 
 }
 .sales{
+    margin-bottom: 40px;
     &__badgetbox {
         display: flex;
         width: 100%;
@@ -786,6 +787,43 @@ body {
         &:hover {
             background: @color-gray;
         }
+    }
+}
+.brands {
+    margin-top: 55px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid @color-gray-light;
+    border-bottom: 1px solid @color-gray-light;
+    text-align: center;
+    &__title{
+        display: inline-block;
+        margin: 0 auto;
+        padding: 10px;
+        background: @color-white;
+        transform: translateY(-20px);
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+}
+.about {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+    &__title {
+        margin-top: 0;
+    }
+    &__paragraph {
+        color: @color-gray;
+    }
+}
+.cards {
+    background: @color-gray-super-light;
+    &__content {
+        padding: 20px 0;
+        text-align: center;
+        color: @color-gray;
+        font-size: 14px;
     }
 }
 @import 'rwd';
