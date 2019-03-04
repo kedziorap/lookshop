@@ -876,13 +876,98 @@ body {
   color: #5c5c5c;
 }
 .cards {
-  background: #ededed;
+  background: #fafafa;
 }
 .cards__content {
   padding: 20px 0;
   text-align: center;
   color: #5c5c5c;
   font-size: 14px;
+}
+.bottom {
+  background: #ededed;
+  padding: 20px 0;
+}
+.bottom__title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.bottom__list {
+  margin: 0;
+  padding: 0;
+}
+.bottom__item {
+  list-style-type: none;
+  font-size: 13px;
+}
+.bottom__box {
+  display: flex;
+  justify-content: space-around;
+}
+.bottom__link {
+  display: inline-block;
+  padding: 1px 0;
+  color: #5c5c5c;
+}
+.bottom__sub {
+  width: 50%;
+  position: relative;
+}
+.bottom__secure {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.social {
+  display: flex;
+  flex-wrap: wrap;
+}
+.social__icon {
+  margin: 5px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  color: #fff;
+  background: #5c5c5c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.social__icon:hover {
+  background: #c7c7c7;
+}
+.footer {
+  background: black;
+  color: #c7c7c7;
+  padding: 40px 0;
+  font-size: 14px;
+}
+.footer__menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.footer__item {
+  list-style-type: none;
+  position: relative;
+}
+.footer__item::after {
+  content: '|';
+}
+.footer__item:last-of-type::after {
+  content: '';
+}
+.footer__link {
+  display: inline-block;
+  padding: 8px;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 @media (max-width: 992px) {
   .col-m-1 {
@@ -1092,6 +1177,13 @@ body {
   .btn--product {
     padding: 5px 10px;
   }
+  .bottom__box:nth-of-type(2) {
+    order: 2;
+  }
+  .social__icon {
+    width: 45px;
+    height: 45px;
+  }
 }
 @media (max-width: 768px) {
   .col-s-1 {
@@ -1129,6 +1221,9 @@ body {
   }
   .col-s-12 {
     width: 100%;
+  }
+  .mobile-show {
+    display: block;
   }
   .loader {
     display: block;
@@ -1257,5 +1352,22 @@ body {
     width: 100%;
     display: block;
     text-align: center;
+  }
+  .footer {
+    padding: 10px 0;
+  }
+  .footer__container {
+    flex-wrap: wrap;
+  }
+  .footer__menu {
+    order: 3;
+    width: 100%;
+    text-align: center;
+  }
+  .footer__item::after {
+    content: '';
+  }
+  .footer__link {
+    width: 100%;
   }
 }

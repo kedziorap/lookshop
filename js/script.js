@@ -12,6 +12,7 @@ $(function(){
     $(window).resize(function(){
         if ($(window).width() > 992) $('.nav__menu').removeAttr('style');
         if ($(window).width() > 992) $('.nav__subcontainer').removeAttr('style');
+        if ($(window).width() > 768) $('.footer__menu').removeAttr('style')
         if ($(window).width() > 768 && !runingBrands) initBrands();
         if ($(window).width() <= 768 && runingBrands) unslickBrands();
     });
@@ -168,4 +169,8 @@ $(function(){
         $('.brands__slider').slick('unslick');
         runingBrands = false;
     }
+    //bottom menu
+    $('#hamburger-bottom').click(function(){
+        $('.footer__menu').slideToggle(400);
+    });
 });
